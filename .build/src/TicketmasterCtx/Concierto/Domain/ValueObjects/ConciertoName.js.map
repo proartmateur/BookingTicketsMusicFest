@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../../src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoName.ts"],
-  "sourcesContent": ["import { StringValueObject } from \"../../../../Shared/ValueObjects/StringValueObject\";\n\nimport {ConciertoUnexpectedValue} from './ConciertoUnexpectedValue'\n\nexport class ConciertoName extends StringValueObject {\n  constructor (protected _value: string){\n    super(_value);\n    //El nombre de un concierto no debe exceder 10 chars\n    if(_value.length > 10){\n      throw new ConciertoUnexpectedValue(`El nombre: ${_value} es demasiado largo. Se esperaban m\u00E1ximo 10 caracteres pero se obtuvo ${_value.length}`);\n    }\n  }\n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,+BAAkC;AAElC,sCAAuC;AAEhC,4BAA4B,2CAAkB;AAAA,EACnD,YAAuB,QAAe;AACpC,UAAM;AADe;AAGrB,QAAG,OAAO,SAAS,IAAG;AACpB,YAAM,IAAI,yDAAyB,cAAc,kFAA+E,OAAO;AAAA;AAAA;AAAA;",
-  "names": []
-}

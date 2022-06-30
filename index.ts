@@ -1,27 +1,25 @@
-import { Concierto } from "./src/TicketmasterCtx/Concierto/Domain/Concierto";
-import { Day } from "./src/TicketmasterCtx/Concierto/Domain/Day";
-import { Stage } from "./src/TicketmasterCtx/Concierto/Domain/Stage";
-Stage
-import { ConciertoDays } from "./src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoDays";
-import { ConciertoName } from "./src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoName";
-import { ConciertoMemoryRepository } from "./src/TicketmasterCtx/Concierto/Infrastructure/Persistence/ConciertoMemoryRepository";
+//Controller necesita inject Repo ConciertoRepository -> ConciertoMemoryRepository
+
+import {
+    ConciertoMemoryRepository
+} from "./src/TicketmasterCtx/Concierto/Infrastructure/Persistence/ConciertoMemoryRepository";
+import {ConciertoDayAdder} from "./src/TicketmasterCtx/Concierto/UseCases/ConciertoDayAdder";
+import {ConciertoFinder} from "./src/TicketmasterCtx/Concierto/UseCases/ConciertoFinder";
 
 const repo = new ConciertoMemoryRepository();
 
-try {
-  
-  const concierto = Concierto.create(
-    new ConciertoName("MF 23"),
-    "Auditorio BlackBerry"
-  );
+// Obtener del exterior los datos del concierto
+const concierto_name = "MF 23";
+const concierto_place = "Auditorio BlackBerry";
+const day_1 = {date: "", seats: 50};
 
-  const seats_per_day = 50;
-  concierto.addDay(Day.create("Día 1", seats_per_day));
-  concierto.addDay(Day.create("Día 2", seats_per_day));
+// Cuerpo del controller
+const adder = new ConciertoDayAdder(repo);
+adder.run(concierto_name, {date: "", seats: 50})
 
-  repo.save(concierto);
+const finder = new ConciertoFinder(repo);
+const saved_concierto = await finder.run(concierto_name);
 
-console.log(concierto);
-} catch(err) {
-  console.log(err.message)
-}
+console.log(saved_concierto)
+
+

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../src/TicketmasterCtx/Concierto/Domain/Day.ts"],
-  "sourcesContent": ["import { Stage } from \"./Stage\";\n\nStage\nexport class Day {\n  constructor(\n    private date: string,\n    private stages: Stage[],\n    private seats: number  \n  ){}\n\n  public static create(date: string, seats: number): Day {\n    return new Day(\n      date,\n      [],\n      seats\n    );\n  }\n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,mBAAsB;AAEtB;AACO,UAAU;AAAA,EACf,YACU,MACA,QACA,OACT;AAHS;AACA;AACA;AAAA;AAAA,SAGI,OAAO,MAAc,OAAoB;AACrD,WAAO,IAAI,IACT,MACA,IACA;AAAA;AAAA;",
-  "names": []
-}

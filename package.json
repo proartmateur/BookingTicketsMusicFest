@@ -7,7 +7,7 @@
   "author": "proartmateur <ennimandroid@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --watch",
+    "build": "tsc --outDir /Users/ennima/Devs/diana/BookingTicketsMusicFest/dist --onSuccess \"echo 'lol'\"",
     "start": "node .build/index.js"
   },
   "devDependencies": {

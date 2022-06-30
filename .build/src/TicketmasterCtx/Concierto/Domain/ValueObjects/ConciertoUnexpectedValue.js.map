@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../../src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoUnexpectedValue.ts"],
-  "sourcesContent": ["export class ConciertoUnexpectedValue extends Error {\n    constructor(msg: string) {\n        super(msg);\n        // Set the prototype explicitly.\n        Object.setPrototypeOf(this, ConciertoUnexpectedValue.prototype);\n    }\n}"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,uCAAuC,MAAM;AAAA,EAChD,YAAY,KAAa;AACrB,UAAM;AAEN,WAAO,eAAe,MAAM,yBAAyB;AAAA;AAAA;",
-  "names": []
-}

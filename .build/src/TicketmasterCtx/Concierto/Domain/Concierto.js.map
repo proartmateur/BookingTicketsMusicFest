@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../src/TicketmasterCtx/Concierto/Domain/Concierto.ts"],
-  "sourcesContent": ["import { Day } from \"./Day\";\nimport { ConciertoDays } from \"./ValueObjects/ConciertoDays\";\nimport { ConciertoName } from \"./ValueObjects/ConciertoName\";\nexport class Concierto {\n  constructor(\n    private  name: ConciertoName,\n    private  days: ConciertoDays, \n    private  place: string,\n    private tickets: number,\n    private  tickets_saled: number\n  ){}\n\n  //Tell dont ask\n  public static create(\n    name: ConciertoName,\n    place: string\n  ): Concierto {\n    return new Concierto(\n      name,\n      new ConciertoDays([]),\n      place,\n      0,\n      0\n    );\n  }\n\n  //command porque muta estado - Side Effects\n  //Tell don't ask\n  public addDay(newDay: Day): void {\n    const current_days = this.days.value();\n    current_days.push(newDay);\n    this.days = new ConciertoDays(current_days);\n  }\n  \n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AACA,2BAA8B;AAEvB,gBAAgB;AAAA,EACrB,YACW,MACA,MACA,OACD,SACC,eACV;AALU;AACA;AACA;AACD;AACC;AAAA;AAAA,SAIG,OACZ,MACA,OACW;AACX,WAAO,IAAI,UACT,MACA,IAAI,mCAAc,KAClB,OACA,GACA;AAAA;AAAA,EAMG,OAAO,QAAmB;AAC/B,UAAM,eAAe,KAAK,KAAK;AAC/B,iBAAa,KAAK;AAClB,SAAK,OAAO,IAAI,mCAAc;AAAA;AAAA;",
-  "names": []
-}

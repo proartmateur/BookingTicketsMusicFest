@@ -1,18 +1,32 @@
-import { Stage } from "./Stage";
+import {Stage} from "./Stage";
 
-Stage
 export class Day {
-  constructor(
-    private date: string,
-    private stages: Stage[],
-    private seats: number  
-  ){}
+    constructor(
+        private _date: string,
+        private _stages: Stage[],
+        private _seats: number
+    ) {
+    }
 
-  public static create(date: string, seats: number): Day {
-    return new Day(
-      date,
-      [],
-      seats
-    );
-  }
+    public static create(date: string, seats: number): Day {
+        return new Day(
+            date,
+            [],
+            seats
+        );
+    }
+
+
+    get date(): string {
+        return this._date;
+    }
+
+    get stages(): Stage[] {
+        return this._stages;
+    }
+
+    get seats(): number {
+        return this._seats;
+    }
+
 }

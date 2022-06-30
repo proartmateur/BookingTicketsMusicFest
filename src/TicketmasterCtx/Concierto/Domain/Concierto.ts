@@ -4,7 +4,7 @@ import { ConciertoName } from "./ValueObjects/ConciertoName";
 export class Concierto {
   constructor(
     private  _name: ConciertoName,
-    private  _days: ConciertoDays, 
+    private  _days: ConciertoDays,
     private  _place: string,
     private _tickets: number,
     private  _tickets_saled: number
@@ -27,30 +27,30 @@ export class Concierto {
   public static makeEmpty(): Concierto {
     return Concierto.create(new ConciertoName(""),"");
   }
-  
+
   //command porque muta estado - Side Effects
   //Tell don't ask
   public addDay(newDay: Day): void {
-    const current_days = this._days.value();
+    const current_days = this._days.value;
     current_days.push(newDay);
     this._days = new ConciertoDays(current_days);
   }
 
-  
+
   get name(): ConciertoName {
     return this._name;
   }
-  public days(): ConciertoDays {
+  get days(): ConciertoDays {
     return this._days;
   }
-  public place(): string {
+  get place(): string {
     return this._place;
   }
-  public tickets(): number{
+  get tickets(): number{
     return this._tickets;
   }
-  public tickets_saled(): number {
+  get tickets_saled(): number {
     return this._tickets_saled;
   }
-  
+
 }
