@@ -1,0 +1,9 @@
+{
+  "name": "BookingTicketsMusicFest",
+  "version": "1.0.0",
+  "description": "Practicando DDD con Ts",
+  "main": "index.js",
+  "repository": "https://github.com/proartmateur/BookingTicketsMusicFest.git",
+  "author": "proartmateur <ennimandroid@gmail.com>",
+  "license": "MIT"
+}
