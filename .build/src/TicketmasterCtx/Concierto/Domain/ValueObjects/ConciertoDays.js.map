@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoDays.ts"],
+  "sourcesContent": ["import { Day } from \"../Day\";\nimport { ConciertoUnexpectedValue } from \"./ConciertoUnexpectedValue\";\n\nexport class ConciertoDays {\n  private max_days = 3;\n  \n   constructor(private _value: Day[]) {\n    if(_value.length > this.max_days) {\n      throw new ConciertoUnexpectedValue(`Un concierto no puede durar m\u00E1s de ${this.max_days} d\u00EDas. Se intent\u00F3 crear uno de ${_value.length}`);\n    }\n  }\n  \n  value(): Day[] {\n    return this._value;\n  }\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AACA,sCAAyC;AAElC,oBAAoB;AAAA,EAGxB,YAAoB,QAAe;AAAf;AACnB,QAAG,OAAO,SAAS,KAAK,UAAU;AAChC,YAAM,IAAI,yDAAyB,yCAAsC,KAAK,gDAA0C,OAAO;AAAA;AAAA;AAAA,EAJ3H,WAAW;AAAA,EAQnB,QAAe;AACb,WAAO,KAAK;AAAA;AAAA;",
+  "names": []
+}

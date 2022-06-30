@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/TicketmasterCtx/Concierto/Domain/Stage.ts"],
+  "sourcesContent": ["export class Stage {\n  constructor(\n    private hour: string,\n    private band: string\n  ){}\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,YAAY;AAAA,EACjB,YACU,MACA,MACT;AAFS;AACA;AAAA;AAAA;",
+  "names": []
+}

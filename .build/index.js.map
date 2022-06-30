@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import { Concierto } from \"./src/TicketmasterCtx/Concierto/Domain/Concierto\";\nimport { Day } from \"./src/TicketmasterCtx/Concierto/Domain/Day\";\nimport { Stage } from \"./src/TicketmasterCtx/Concierto/Domain/Stage\";\nStage\nimport { ConciertoDays } from \"./src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoDays\";\nimport { ConciertoName } from \"./src/TicketmasterCtx/Concierto/Domain/ValueObjects/ConciertoName\";\n\n\ntry {\n  \n  const concierto = Concierto.create(\n    new ConciertoName(\"MF 23\"),\n    \"Auditorio BlackBerry\"\n  );\n\n  const seats_per_day = 50;\n  concierto.addDay(Day.create(\"D\u00EDa 1\", seats_per_day));\n  concierto.addDay(Day.create(\"D\u00EDa 2\", seats_per_day));\n  concierto.addDay(Day.create(\"D\u00EDa 3\", seats_per_day));\n  concierto.addDay(Day.create(\"D\u00EDa 4\", seats_per_day));\n\nconsole.log(concierto);\n} catch(err) {\n  console.log(err.message)\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,uBAA0B;AAC1B,iBAAoB;AACpB,mBAAsB;AAGtB,2BAA8B;AAF9B;AAKA,IAAI;AAEF,QAAM,YAAY,2BAAU,OAC1B,IAAI,mCAAc,UAClB;AAGF,QAAM,gBAAgB;AACtB,YAAU,OAAO,eAAI,OAAO,YAAS;AACrC,YAAU,OAAO,eAAI,OAAO,YAAS;AACrC,YAAU,OAAO,eAAI,OAAO,YAAS;AACrC,YAAU,OAAO,eAAI,OAAO,YAAS;AAEvC,UAAQ,IAAI;AAAA,SACJ,KAAN;AACA,UAAQ,IAAI,IAAI;AAAA;",
+  "names": []
+}

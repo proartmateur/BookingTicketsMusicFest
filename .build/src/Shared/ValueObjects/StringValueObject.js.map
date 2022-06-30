@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/Shared/ValueObjects/StringValueObject.ts"],
+  "sourcesContent": ["export class StringValueObject {\n\n  constructor(protected _value: string) {\n  }\n\n  value(): string {\n    return this._value;\n  }\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAO,wBAAwB;AAAA,EAE7B,YAAsB,QAAgB;AAAhB;AAAA;AAAA,EAGtB,QAAgB;AACd,WAAO,KAAK;AAAA;AAAA;",
+  "names": []
+}
